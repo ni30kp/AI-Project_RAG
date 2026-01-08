@@ -128,13 +128,14 @@ class QdrantStore:
             ]
             query_filter = Filter(must=conditions)
         
-        # Search using search method (compatible with qdrant-client 1.7.0)
-        results = self.client.search(
+        # Search using query_points method (compatible with qdrant-client 1.8.0+)
+        search_result = self.client.query_points(
             collection_name=self.collection_name,
-            query_vector=query_embedding,
+            query=query_embedding,
             limit=k,
             query_filter=query_filter,
         )
+        results = search_result.points
         
         # Convert to Documents
         documents = []
