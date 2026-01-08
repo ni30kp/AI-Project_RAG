@@ -1,0 +1,27 @@
+# LangChain & LangGraph
+langchain>=0.1.0
+langgraph>=0.0.40
+langsmith>=0.1.0
+langchain-groq>=0.1.0
+langchain-community>=0.0.20
+
+# Embeddings (free, local)
+sentence-transformers>=2.2.0
+
+# Vector Database
+qdrant-client>=1.7.0
+
+# UI
+streamlit>=1.30.0
+
+# PDF Processing
+pypdf>=3.17.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-asyncio>=0.23.0
